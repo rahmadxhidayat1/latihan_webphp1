@@ -11,7 +11,7 @@
 	}else if(isset($_GET['act']) && ($_GET['act']== "edit")){
 		$judul = "Form Edit Data";
 		$idkey = $_GET['id']; //dapat dari URL
-		$qdata = mysqli_query($connect_db,"select * mst_kategoriblog where id_kategori=$idkey")or die(mysqli_error($connect_db));
+		$qdata = mysqli_query($connect_db,"select * FROM mst_kategoriblog where id_kategori=$idkey")or die(mysqli_error($connect_db));
 		$data = mysqli_fetch_array($qdata);
 		$aktif = $data['is_active']; //value dari tabel di kolom is_active
 		if($aktif == 1){
