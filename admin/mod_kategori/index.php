@@ -75,7 +75,7 @@ else if(isset($_GET['act']) && ($_GET['act']== "add")){
 				<input type="text" class="form-control" name="nm_kategori" id="nm_kategori" value="<?php echo $data['nm_kategori']; ?>">
 			</div>
 		</div>
-		<div class="row">
+		<div class="row">>
 			<div class="col-md-2"></div>
 			<div class="col-md-6">
 			<input class="form-check-input" type="checkbox" name="isactive" id="isactive" <?= $data['is_active'] == 1 ? "checked" : "" ?>> Aktif
