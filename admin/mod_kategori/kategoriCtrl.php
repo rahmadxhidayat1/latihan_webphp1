@@ -2,13 +2,15 @@
 	if(isset($_GET['act']) && ($_GET['act']=="update" || $_GET['act']== "save")){
 		require_once "../../config/koneksi_db.php";
 		require_once "../../config/config.php";		
-	}else{
+	}
+	else{
 		require_once "../config/koneksi_db.php";
 		require_once "../config/config.php";
 	}
 	if(isset($_GET['act']) && ($_GET['act']== "add")){
 		$judul = "Form Input Data";
-	}else if(isset($_GET['act']) && ($_GET['act']== "edit")){
+	}
+	else if(isset($_GET['act']) && ($_GET['act']== "edit")){
 		$judul = "Form Edit Data";
 		$idkey = $_GET['id']; //dapat dari URL
 		$qdata = mysqli_query($connect_db,"select * FROM mst_kategoriblog where id_kategori=$idkey")or die(mysqli_error($connect_db));
@@ -23,10 +25,7 @@
 	}
 	else if(isset($_GET['act']) && ($_GET['act']== "save")){
 		//jika ada send variabel act=save, ketika proses simpan(insert)
-		// $id_user = $_POST['nm_kategori'];
 		$username = $_POST['nm_kategori'];
-		// $pass = $_POST['password'];
-		// $isactive =$_POST['is_active'];
 		if(isset($_POST['isactive'])){
 			$aktif = 1;
 		}

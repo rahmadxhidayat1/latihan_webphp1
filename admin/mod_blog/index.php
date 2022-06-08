@@ -1,12 +1,12 @@
 <?php 
-include_once("kategoriCtrl.php");
+include_once("blogCtrl.php");
 if(!isset($_GET['act'])){
 //jika tidak ditemukan pengiriman variabel "act"
 ?>
-<a href="?modul=mod_kategori&act=add" class="btn btn-primary">Tambah</a>
+<a href="?modul=mod_blog&act=add" class="btn btn-primary">Tambah</a>
 <br><br>
 <table class="table table-bordered">
-    <tr>
+    <tr class="text-center">
         <th>ID Blog</th>
         <th>Judul</th>
         <th>Kategori</th>
@@ -16,20 +16,28 @@ if(!isset($_GET['act'])){
         <th>Action</th>
     </tr>
     <?php
-	$qry_listmenu = mysqli_query($connect_db,"select * from mst_kategoriblog order by id_kategori DESC")or die("gagal akses table mst_kategoriblog ".mysqli_error($connect_db));
-	while($row = mysqli_fetch_array($qry_listmenu)){		
+	$qry_listmenu = mysqli_query($connect_db,"SELECT * FROM mst_blog")
+	or die("gagal akses table mst_kategoriblog ".mysqli_error($connect_db));
+	while($row = mysqli_fetch_array($qry_listmenu)){	
+        $id=$row['id_kategori'];
+        $k1=mysqli_query($connect_db,"SELECT nm_kategori FROM mst_kategoriblog WHERE id_kategori=$id");
+        if($k2=mysqli_fetch_array($k1)){
 	?>
 	<tr>
-		<td><?php echo $row['id_kategori']; ?></td>
-		<td><?= $row['nm_kategori']; ?></td>
-		<td><?= $row['is_active']; ?></td>
+		<td><center><?php echo $row['id_blog']; ?></center></td>
+		<td><center><?= $row['judul']; ?></td></center>
+		<td><center><?= $k2['nm_kategori']; ?></center></td>
+        <td><?= $row['isi']; ?></td>
+        <td><center><?= $row['author']; ?></td></center>
+        <td><?= $row['date_input']; ?></td>
         <td>
-			<a href="?modul=mod_kategori&act=edit&id=<?= $row['id_kategori']; ?>" class="btn btn-xs btn-primary"> <i class="bi bi-pencil-square" > </i> edit </a>
+			<a href="?modul=mod_blog&act=edit&id=<?= $row['id_kategori']; ?>" class="btn btn-xs btn-primary"> <i class="bi bi-pencil-square" ></i> edit </a>
 			<a href="?modul=mod_kategori&act=delete&id=<?= $row['id_kategori']; ?>" class="btn btn-xs btn-danger p-1"><i class="bi bi-trash"></i>Delete</a>
 		</td>
 	</tr>
 	<?php
-		}
+        }
+    }
 	?>
 </table>
 <?php 
@@ -39,26 +47,47 @@ else if(isset($_GET['act']) && ($_GET['act']== "add")){
 ?>
 <div class="container-fluid">
 	<h3><?php echo $judul; ?></h3>
-	<form action="mod_kategori/kategoriCtrl.php?modul=mod_kategori&act=save" method="post">
-		<div class="row mb-1">
-			<label for="" class="col-md-2">Nama kategori</label>
+	<form action="mod_blog/blogCtrl.php?modul=mod_blog&act=save" method="post">
+    <div class="row mb-1">
+			<label for="" class="col-md-2">judul</label>
 			<div class="col-md-6">
-				<input type="text" name="nm_kategori" id="nm_kategori" class="form-control ">
+                <input type="hidden" name="author" value="<?=$_SESSION['userlogin']; ?>">
+				<input type="text" name="judul" id="judul" class="form-control ">
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-md-2"></div>
+		<div class="row mb-1">
+			<label for="id_kategori" class="col-md-2">kategori</label>
 			<div class="col-md-6">
-				<input type="checkbox" name="isactive" id="isactive"> Aktif
+            <select name="id_kategori" id="id_kategori" class="form-select">
+                <option selected disabled>-- pilih kategori --</option>
+                <?php
+                $category=mysqli_query($connect_db,"select * from mst_kategoriblog");
+                while($data=mysqli_fetch_array($category)){
+                    ?>
+                    <option value="<?=$data['id_kategori'];?>"><?=$data['nm_kategori']; ?></option>
+                    <?php }?>
+                </select>
+			</div>
+		</div>
+        <div class="row mb-1">
+			<label for="" class="col-md-2">isi</label>
+			<div class="col-md-6">
+				<textarea name="isi" id="isi" class="form-control "></textarea>
+			</div>
+		</div>
+        <div class="row mb-1">
+			<label for="" class="col-md-2">Tanggal input</label>
+			<div class="col-md-6">
+				<input type="date" name="date_input" id="date_input" class="form-control ">
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-md-2"></div>
 			<div class="col-md-6">
 				<button type="reset" name="btnreset" value="btnbatal" class="btn btn-xs btn-secondary p-1">
-					<i class="bi bi-x-lg"></i> Batal</a></button>
+					<i class="bi bi-x-lg"></i>Batal</a></button>
 				<button type="submit" name="btnsimpan" value="btnsimpan" class="btn btn-xs btn-primary p-1">
-					<i class="bi bi-save"></i> Simpan</a></button>
+					<i class="bi bi-save"></i>Simpan</a></button>
 			</div>
 		</div>
 	</form>
@@ -70,18 +99,63 @@ else if(isset($_GET['act']) && ($_GET['act']== "add")){
 ?>
 <div class="container-fluid">
 	<h3><?php echo $judul ?></h3>
-	<form action="mod_kategori/kategoriCtrl.php?modul=mod_menu&act=update" method="POST">
-		<div class="row mb-1">
-			<label for="" class="col-md-2">Nama Kategori</label>
+	<form action="mod_blog/blogCtrl.php?modul=blog&act=update" method="POST">
+	<div class="row mb-1">
+			<label for="" class="col-md-2">judul</label>
 			<div class="col-md-6">
-				<input type="hidden" class="form-control" name="id_kategori" id="id_kategori" value="<?= $data['id_kategori']; ?>">
-				<input type="text" class="form-control" name="nm_kategori" id="nm_kategori" value="<?php echo $data['nm_kategori']; ?>">
+				<!-- input type hidden ini untuk menyimpan idmenu sebagai key untuk proses update data
+				kenapa di hidden, karena field sbg primary key tidak boleh di edit -->
+				<input type="hidden" name="id_blog" id="id_blog" class="form-control" value="<?= $data['id_blog']; ?>">
+				<input type="text" name="up_judul" id="up_judul" class="form-control" value="<?= $data['judul']; ?>">
 			</div>
 		</div>
-		<div class="row">>
-			<div class="col-md-2"></div>
+		<div class="row mb-1">
+			<label for="" class="col-md-2">kategori</label>
 			<div class="col-md-6">
-			<input class="form-check-input" type="checkbox" name="isactive" id="isactive" <?= $data['is_active'] == 1 ? "checked" : "" ?>> Aktif
+				<select name="up_kategori" id="up_kategori" class="form-select">
+                    <?php 
+                    $kat1=mysqli_query($connect_db,"select * from mst_kategoriblog");
+                    while($updata=mysqli_fetch_array($kat1)){
+                        if($updata['id_kategori']===$data['id_kategori']){
+                            $select = "selected";
+                        } 
+                        else{
+                            $select = "";
+                        }
+                    ?>
+                       <option value="<?=$updata['id_kategori']; ?>"<?= $select; ?>><?=$updata['nm_kategori']; ?></option> 
+                    <?php } ?>
+                </select>
+			</div>
+		</div>
+		<div class="row mb-1">
+			<label for="" class="col-md-2">isi</label>
+			<div class="col-md-6">
+				<textarea name="isi" id="isi" class="form-control" ><?= $data['isi']; ?></textarea>
+			</div>
+		</div>
+		<div class="row mb-1">
+			<label for="" class="col-md-2">author</label>
+			<div class="col-md-6">
+				<select name="up_author" id="up_author" class="form-select">
+                    <?php 
+                    $author1=mysqli_query($connect_db,"select username from mst_user");
+                    while($auth=mysqli_fetch_array($author1)){
+                        if($auth['username']===$data['author']){
+                            $select="selected";
+                        }else{
+                            $select="";
+                        }
+                    ?>
+                        <option value="<?= $auth['username'];?>"<?= $select; ?>><?= $auth['username']; ?></option>
+                    <?php } ?>
+                </select>
+			</div>
+		</div>
+        <div class="row mb-1">
+			<label for="" class="col-md-2">date input</label>
+			<div class="col-md-6">
+				<input type="date" name="date_input" id="date_input" class="form-control " value="<?= $data['date_input'] ?>">
 			</div>
 		</div>
 		<div class="row">

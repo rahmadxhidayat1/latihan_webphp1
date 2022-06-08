@@ -35,14 +35,14 @@ require_once("../config/config.php");
 	</nav>
 	<!-- content -->
 	<section>
-		<div class="container-fluid">
+		<div class="container-fluid mt-2">
 			<div class="row">
-				<div class="col-lg-3 p-3">
+				<div class="col-md-2 p-3">
 					<?php 
 						include_once("menu.php");
 					?>
 				</div>
-				<div class="col-lg-9 p-5">
+				<div class="col-md-10 p-5">
 					<!-- kolom untuk menampilkan konten -->
 					<?php 
 						if(isset($_GET['modul'])){
@@ -57,6 +57,6 @@ require_once("../config/config.php");
 			</div>
 		</div>
 	</section>
+	<script src="../assets/bootstrap5/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
