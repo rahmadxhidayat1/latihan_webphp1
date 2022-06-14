@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* navbar */
+nav {
+    display: flex;
+    background-color: orange ;
+    justify-content: space-around;
+    /* padding: 20px 0; */
+    height: 50px;
+    align-items: center;
+}
+nav .logo{
+    font-family: fantasy;
+    letter-spacing: 3px;/* untuk membuat space ada jaraknya*/
+}
+.navbar {
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        width: 100%;
+}
+header div h2{
+    font-family: 'Indie Flower', cursive;
+    text-align: center;
+}
+header {
+    background: url("img/container.jpg") center;
+    padding-left: 0;
+    padding-right: 0;
+    height: 220px;
+}
+nav ul{
+    display: flex;
+    width: 30%;
+    justify-content: space-between;
+}
+nav ul li a {
+    text-decoration: none;
+    font-family: 'Abril Fatface', cursive;
+    font-size: 0.8em;
+}
+/* ukuran tablet */
+@media screen and (max-width: 768px){
+    nav ul {
+        width: 50%;
+    }
+}
+/*  ukura mobile */
+@media screen and (max-width: 576px){
+    nav ul {
+        display: none;
+    }
+}
+
+/* .menu-toogle input{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 15px;
+    top: -3px;
+    /* opacity: 0; 
+}*/
+
+/* .menu-toogle{
+    display: flex;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    background-color: springgreen;
+} */
+/* .menu-toogle span{
+    display: box;
+    width: 28px;
+    height: 3px;
+    background-color: sienna;
+    border-radius: 3px;
+} */

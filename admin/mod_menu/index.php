@@ -13,7 +13,7 @@ if(!isset($_GET['act'])){
 	</tr>
 	<?php
 	$qry_listmenu = mysqli_query($connect_db,"select * from mst_menu order by idmenu DESC")
-			or die("gagal akses table mst_menu ".mysqli_error($connect_db));
+		or die("gagal akses table mst_menu ".mysqli_error($connect_db));
 	while($row = mysqli_fetch_array($qry_listmenu)){		
 	?>
 	<tr>

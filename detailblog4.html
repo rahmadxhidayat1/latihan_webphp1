@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style1.css">
+    <link rel="stylesheet" href="assets/bootstrap5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/detailblog3.css">
+    <title>detailblog4</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-secondary sticky-xl-top">
+        <div class="container-fluid">
+          <a class="navbar-brand text-danger" href="#">RAHMAD <span style="color: rgb(25, 44, 219);">HIDAYAT</span> PUTRA</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse left position-sticky" id="navbarScroll">
+            <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact_us" id>Contact Us </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Download
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarScrollingDropdown">
+                  <li><a class="dropdown-item" href="materi/01 - pengenalan html.pdf" download="">materi HTML<i class="bi bi-file-earmark-text"></i></a></li>
+                  <li><a class="dropdown-item" href="materi/09 10 - Pengenalan CSS (1).pdf" download="">materi CSS<i class="bi bi-braces"></i></a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="materi/13 14 - Bootstrap.pdf" download="">materi Bootstrap<i class="bi bi-people-fill"></i></a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="resume.html">Resume</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="project_uas/">My store</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!--LINE-->
+      <section class="bg-black bg-opacity-75">
+          <div class="container-fluid">
+              <div class="row">
+                  <div class="col-1"></div>
+                  <div class="col-10">
+                      <br>
+                      <h1 class="h1 text-center bi-textarea text-opacity-75 text-danger"> TUGAS </h1>
+                      <div class="row">
+                        <div class="col-4">
+                          <div class="list-group" id="list-tab" role="tablist">
+                            <a class="list-group-item list-group-item-action active" id="list-home-list" data-bs-toggle="list" href="#list-home" role="tab" aria-controls="list-home">
+                                Perbedaan include and include_once?
+                            </a>
+                            <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="list-profile">
+                                Fungsi define, adalah?
+                            </a>
+                            <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="list" href="#list-messages" role="tab" aria-controls="list-messages">
+                                Buat contoh fungsi explode dan implode sebelum/sesudah diberikan fungsi
+                            </a>
+                            <a class="list-group-item list-group-item-action" id="list-settings-list" data-bs-toggle="list" href="#list-settings" role="tab" aria-controls="list-settings">
+                                Contoh fungsi itrim, rtrim, trim untuk menghapus spasi dan koma (sebelum/sesudah diberikan fungsi)
+                            </a>
+                            <a class="list-group-item list-group-item-action" id="list-new-list" data-bs-toggle="list" href="#list-new" role="tab" aria-controls="list-new">
+                                Jelaskan fungsi strchr(),substr(), str_replace(), strtolower(), strtoupper(), explode()
+                            </a>
+                            <a class="list-group-item list-group-item-action" id="list-make-list" data-bs-toggle="list" href="#list-make" role="tab" aria-controls="list-make">
+                                fungsi php untuk pembulatan bilangan float dan contohnya
+                            </a>
+                            <a class="list-group-item list-group-item-action" id="list-evolve-list" data-bs-toggle="list" href="#list-evolve" role="tab" aria-controls="list-evolve">
+                                Sebutkan fungsi convert string to int, dan contohnya
+                            </a>
+                          </div>
+                        </div>
+                        <div class="col-8 text-light">
+                          <div class="tab-content" id="nav-tabContent">
+                            <!-- no1 -->
+                            <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+                                mengambil semua teks/kode/markup yang ada dalam file yang ditentukan dan menyalinnya ke dalam file yang menggunakan pernyataan include.
+                                Menyertakan file sangat berguna ketika Anda ingin menyertakan PHP, HTML, atau teks yang sama di beberapa halaman situs web.
+                                <h2><b><u>INCLUDE:</u></b></h2>
+                                  <img src="img/soal2.png" alt=""><h3>kodingnya</h3>
+                                  <img src="img/soal1.png" alt=""><H3>tampilannya</H3>
+                                  <br>
+                                <h2><b><u>INCLUDE_ONCE:</u></b></h2>
+                                  <img src="img/soal3.png" alt=""><h3>kodingnya</h3>
+                                  <img src="img/soal4.png" alt=""><H3>tampilannya</H3>
+                                  <br>
+                                <h2>Kesimpulan/perbedaanya?</h2>
+                                <p>include berapapun kita tampilkan dia seperti 2 kali atau lebih akan tetap muncul dan include_once hanya ditampilkan sekali saat pertama di masukkan. 
+                                  PHP itu mudah bukan?</p>
+                            </div>
+                            <!-- no2 -->
+                            <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+                              kalau diartikan adalah menetapkan atau mendefinisikan. Jadi, fungsi <code>define()</code> digunakan 
+                              untuk menetapkan suatu nilai yang bersifat tetap pada sebuah nama, sehingga nama tersebut disebut Konstanta. berikut contoh konstanta dengan define().
+                              <hr class="btn-light" width="100%" size="10px" noshade align="left">
+                              <img src="img/soal5.png" alt="">
+                              <p><br></p>
+                              <img src="img/soal6.png" alt="">
+                            </div>
+                            <!-- no3 -->
+                            <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
+                              <h2 class="text-uppercase">sebelum</h2>
+                              <img src="img/soal7.png" alt="">
+                              <br><br>
+                              <img src="img/soal8.png" alt="">
+                              <h2 class="text-uppercase">SESUDAH</h2>
+                              <hr>
+                              <h5>Sesudah di explode</h5>
+                              <img src="img/soal9.png" alt="">
+                              <br><br>
+                              <img src="img/soal10.png" alt="">
+                              <hr>
+                              <h5>Sesudah di implode</h5>
+                              <img src="img/soal11.png" alt="">
+                              <br><br>
+                              <img src="img/soal12.png" alt="">
+                            </div>
+                            <!-- no4 -->
+                            <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
+                                <h1 class="text-uppercase">SEBELUM</h1>
+                                <br>
+                                <img src="img/soal13.png" alt="">
+                                <br><br>
+                                <img src="img/soal14.png" alt="">
+                                <h1 class="text-uppercase">SESUDAH</h1>
+                                <ul>
+                                  <li>
+                                     <h4>MENGHAPUS SPASI</h3>
+                                      <img src="img/soal15.png" alt="">
+                                      <br><br>
+                                      <img src="img/soal16.png" alt="">
+                                  </li>
+                                  <li>
+                                    <h4>MENGHAPUS KOMA</h3>
+                                     <img src="img/soal17.png" alt="">
+                                     <br><br>
+                                     <img src="img/soal18.png" alt="">
+                                 </li>
+                                </ul>
+                            </div>
+                            <div class="tab-pane fade" id="list-new" role="tabpanel" aria-labelledby="list-new-list">
+                                <ul>
+                                  <li>
+                                    <h4>strchr()</h4>
+                                    <p>Fungsi strchr() mencari kemunculan pertama string di dalam string lain.</p>
+                                    <img src="img/soal19.png" alt="">
+                                  </li>
+                                  <li>
+                                    <h4>substr()</h4>
+                                    <p>Fungsi substr() PHP merupakan fungsi yang digunakan untuk memotong bagian dari string, dimulai dari posisi tertentu.</p>
+                                    <img src="img/soal20.png" alt="">
+                                  </li>
+                                  <li>
+                                    <h4>str_replace()</h4>
+                                    <p>Fungsi str_replace() menggantikan beberapa karakter dengan beberapa karakter lain dalam sebuah string.</p>
+                                    <img src="img/soal21.png" alt="">
+                                  </li>
+                                  <li>
+                                    <h4>strtolower()</h4>
+                                    <p>Fungsi strtolower() buat huruf kecil</p>
+                                    <img src="img/soal22.png" alt="">
+                                  </li>
+                                  <li>
+                                    <h4>strtoupper()</h4>
+                                    <p>Fungsi strtoupper() buat huruf besar.</p>
+                                    <img src="img/soal23.png" alt="">
+                                  </li>
+                                  <li>
+                                    <h4>explode()</h4>
+                                    <p>Fungsi explode() mencari kemunculan pertama string di dalam string lain.</p>
+                                    <img src="img/soal24.png" alt="">
+                                  </li>
+                                </ul>
+                            </div>
+                            <div class="tab-pane fade" id="list-make" role="tabpanel" aria-labelledby="list-make-list">
+                                <h3>-Menggunakan round()</h3>
+                                <img src="img/soal25.png" alt="">
+                                <br><br>
+                                <img src="img/soal26.png" alt="">
+                            </div>
+                            <div class="tab-pane fade" id="list-evolve" role="tabpanel" aria-labelledby="list-evolve-list">
+                                <p><H1 class="text-uppercase"></H1></p>
+                                <p>macam-macam fungsi yang bisa digunakan untuk mengubah string ke int </p>
+                                <ul>
+                                  <li>
+                                    <code>(int)</code>
+                                  </li>
+                                  <li>
+                                    <code>intval()</code>
+                                  </li>
+                                </ul>
+                                <img src="img/soal27.png" alt="">
+                                <br><br>
+                                <img src="img/soal28.png" alt="">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="col-1"></div>
+              </div>
+          </div>
+      </section>
+      <!-- LINE -->
+      
+      <!-- JS -->
+      <script type="text/javascript" src="assets/bootstrap5/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

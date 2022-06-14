@@ -1,153 +1,124 @@
 <?php 
-require_once("config/koneksi_db.php"); 
-require_once("config/config.php");
+  require_once('config/config.php');
+  require_once('config/koneksi_db.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Landing Page</title>
-	<link rel="stylesheet" href="assets/bootstrap5/css/bootstrap.min.css" />
-	<link rel="stylesheet" href="assets/style.css" />
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style1.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <title>Test</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <style>
+        .fontgoogle{
+            font-family: 'Shadows Into Light', cursive
+        }
+    </style>
 </head>
-
 <body>
-
-	<!-- navbar -->
-	<nav class="navbar navbar-expand-lg navbar-light bg-info">
-		<div class="container-fluid pe-5 ps-5">
-			<a class="navbar-brand fw-bold" href="index.html">
-				<h3>AniNur's Page</h3>
-			</a>
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-				data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-				aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-
-			<div class="collapse navbar-collapse text-white" id="navbarSupportedContent">
-				<ul class="navbar-nav ms-auto mb-2 mb-lg-0 fontnav">
-					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="#">Home</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="index.html#contactus">Contact Us</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="resume.html">Resume</a>
-					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-							data-bs-toggle="dropdown" aria-expanded="false">
-							<i class="bi bi-people-fill"></i> Download</a>
-						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<li>
-								<a class="dropdown-item" href="signin.html" target="_blank"> <i
-										class="bi bi-file-text"></i> Materi HTML </a>
-							</li>
-							<li>
-								<a class="dropdown-item" href="#"><i class="bi bi-code-square"></i> Materi CSS</a>
-							</li>
-							<li>
-								<hr class="dropdown-divider" />
-							</li>
-							<li>
-								<a class="dropdown-item" href="#"><i class="bi bi-bootstrap-reboot"></i> Materi
-									Bootstrap</a>
-							</li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-
-	<!-- header -->
-	<header class="bg-white">
-		<div class="container-fluid d-flex justify-content-center align-items-center p-3">
-			<span class="pe-2">
-				<h3>Hello..</h3>
-				<h1>I'am Web Designer</h1>
-			</span>
-			<span>
-				<img src="assets/images/header.png" class="rounded-circle img-fluid img-thumbnail" width="500" />
-			</span>
-		</div>
-	</header>
-
-	<!-- About Me -->
-	<section id="aboutme" class="bg-light">
-		<div class="container-fluid d-flex flex-column align-items-center p-4">
-			<h1 class="text-primary text-opacity-100 pb-3">=== About Me ===</h1>
-			<!-- <span class=""
-          >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique vel maiores eius! Voluptates qui mollitia facilis omnis eos natus vitae
-          in, totam, numquam dicta officia minima consequuntur dolorum dolor cupiditate!</span
-        > -->
-			<div class="row pb-4 justify-content-center">
-				<div class="col-2"></div>
-				<div class="col-8 text-center">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores a harum explicabo est? Aperiam
-					dolore asperiores reiciendis debitis
-					tempora optio itaque quam quasi dolorum aliquid? Quae natus perferendis atque laborum!
-				</div>
-				<div class="col-2"></div>
-			</div>
-		</div>
-	</section>
-
-	<!-- blog -->
-	<section id="blog" class="bg-white">
-		<div class="container-fluid d-flex flex-column align-items-center p-4">
-			<h1 class="text-primary text-opacity-100 pb-3">=== My Blog ===</h1>
-			<div class="row mb-4">
-				<div class="col-md-2"></div>
-				<div class="col-md-2">
-					<img src="assets/images/gambar1.jpg" width="270" class="img-fluid img-thumbnail" />
-				</div>
-				<div class="col-md-6">
-					<h4>Judul Artikel-1</h4>
-					<div>
-						<span class="badge bg-info text-white rounded-3 fs-6">10/11/2011</span>
-						<span class="text-primary fs-6">Created By : Aninur</span>
-					</div>
-					<p>
-						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores fugit quod cumque provident
-						quasi! Ut minus veritatis sed atque, aut
-						modi fugit? Veniam quos voluptatum harum cumque vero, numquam dolore! [ <a
-							href="detailblog1.html">Baca Selengkapnya</a> ]
-					</p>
-					<hr />
-				</div>
-			</div>
-			<div class="row mb-4">
-				<div class="col-md-2"></div>
-				<div class="col-md-2">
-					<img src="assets/images/gambar1.jpg" width="270" class="img-fluid img-thumbnail" />
-				</div>
-				<div class="col-md-6">
-					<h4>Judul Artikel-2</h4>
-					<div>
-						<span class="badge bg-info text-white rounded-3 fs-6">10/11/2011</span>
-						<span class="text-primary fs-6">Created By : Aninur</span>
-					</div>
-					<p>
-						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores fugit quod cumque provident
-						quasi! Ut minus veritatis sed atque, aut
-						modi fugit? Veniam quos voluptatum harum cumque vero, numquam dolore! [ <a
-							href="detailblog2.html">Baca Selengkapnya</a> ]
-					</p>
-					<hr />
-				</div>
-			</div>
-		</div>
-	</section>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-secondary sticky-xl-top">
+        <div class="container-fluid">
+          <a class="navbar-brand text-danger" href="#">RAHMAD <span style="color: rgb(25, 44, 219);">HIDAYAT</span> PUTRA</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse left position-sticky" id="navbarScroll">
+            <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact_us" id>Contact Us </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Download
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarScrollingDropdown">
+                  <li><a class="dropdown-item" href="materi/01 - pengenalan html.pdf" download="">materi HTML<i class="bi bi-file-earmark-text"></i></a></li>
+                  <li><a class="dropdown-item" href="materi/09 10 - Pengenalan CSS (1).pdf" download="">materi CSS<i class="bi bi-braces"></i></a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="materi/13 14 - Bootstrap.pdf" download="">materi Bootstrap<i class="bi bi-people-fill"></i></a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="resume.html">Resume</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="project_uas/">My store</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <!-- header --> 
+    <header class="bg-info opacity-75">
+      <br>
+      <div class="container-fluid justify-content-center d-flex flex-row align-items-center">
+        <h2 class="text-uppercase text-dark"><b>sirlock xander</b><br><span class="p-3"><b>Si manusia senja</b></span></h2>
+        <img src="img/32-modified.png" class="img1" alt="">
+      </div>
+      <br>
+    </header>
+    <!-- section -->
+    <section id="about">
+        <div class="container-fluid d-flex section1 flex-column align-items-center">
+            <h3 class="fontgoogle">----------||TENTANG DIRIKU||----------</h3>
+            <marquee width="750"><p><h3 class="text-uppercase fontgoogle">Saya adalah seorang anak pertama dari 4 bersaudara </h3></p></marquee>
+           </div>
+    </section>
+    <!-- section about -->
+    <section class="section1">
+        <h3 class="text-lg-center fontgoogle">-----Website tentang mendesign sebuah web-----</h3>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="container-fluid">
+                  <?php 
+                    $qry_blog= mysqli_query($connect_db,"select * from mst_blog ");
+                    while($row = mysqli_fetch_array($qry_blog)){
+                  ?>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card p-1 mb-3 container" style="max-width: 1050px;">
+                                <div class="row g-0">
+                                    <div class="col-md-4">
+                                        <img src="img/3x4.png" class="img-fluid rounded-start" style="width: fit-content;" alt="...">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title"><?= $row['judul'];?></h5>
+                                            <a href="#" class="btn btn-primary"><?= $row['date_input']; ?></a>
+                                            <a class="text-info">created by <?= $row['author'];?></a>
+                                            <p class="card-text"><?= substr($row['isi'],0,200); ?>
+                                                <a href="detailblog1.html">
+                                                    <u>baca selengkapnya</u>
+                                                </a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <?php }; ?>
+                </div>
+</div>
+</div>
+</div>
 	<!-- contact us -->
-	<section id="contactus" class="bg-light">
-		<div class="container p-4">
+	<section id="contactus">
+		<div class="container p-4 fontgoogle bg-light opacity-100">
 			<h1 class="text-primary text-opacity-100 text-center pb-3">=== Contact Us ===</h1>
 			<div class="row">
 				<div class="col col-lg-2"></div>
@@ -192,34 +163,40 @@ require_once("config/config.php");
 			</div>
 		</div>
 	</section>
-	<!-- footer -->
-	<footer class="bg-info bg-opacity-100">
-		<div class="container-fluid d-flex justify-content-center text-white p-3">
-			<span class="me-5 pe-5 fs-6">
-				<address class="fw-bold">Head Office :</address>
-				<p>Jalan Medan Merdeka Barat No. 9 Jakarta Pusat 10110 DKI Jakarta, Indonesia</p>
-				<p>Telepon : 081-319301-010</p>
-				<p>Emai : aninur.h@gmail.com</p>
-			</span>
-			<span class="ms-5">
-				<address class="fw-bold">Social Media</address>
-				<p>
-					<a href="http://" target="_blank" rel="noopener noreferrer"><i
-							class="bi bi-whatsapp iconsize"></i></a> Whatsapp
-				</p>
-				<p>
-					<a href="http://" target="_blank" rel="noopener noreferrer"><i
-							class="bi bi-instagram iconsize"></i></a> Instagram
-				</p>
-				<p>
-					<a href="http://" target="_blank" rel="noopener noreferrer"><i
-							class="bi bi-facebook iconsize"></i></a> Facebook
-				</p>
-			</span>
-		</div>
-	</footer>
-	<!-- include file bootstrap js -->
-	<script src="assets/bootstrap5/js/bootstrap.bundle.min.js"></script>
+    <br>
+    </section>
+    <!-- footer -->
+    <footer class="bg3 bg-opacity-25 p-5"><h3 class="text-lg-center"></h3>
+      <div class="row container-fluid">
+        <div class="col-1 col-md-1"></div>
+        <div class="col-2 col-md-5 ps-1 container-fluid">
+          <h5 class="warnatext2"><b>HEAD OFFICE</b></h5>
+          <p class="warnatext2"><b>jalan RA kartini blok AA no 1 newyork 125100 chichago, US</p></b>
+          <p class="warnatext2"><b>Telepon: 082140479329</b></p>
+          <p class="warnatext2"><b>Email:sirlock1812@gmail.com</b></p>
+        </div>
+        <div class="col-3 col-md-5">
+            <div class="row">
+                <div class="col-1 col-md-3">
+                </div>
+            <br>
+            <div class="col-2 col-md-6">
+                <div class="row ps-3 pb-2">
+                    <div class="container"><a href="http://wa.me/6285904351687" target="_blank" rel=""><h4 class="warnatext2"><i class="bi-whatsapp pe-md-2"></i></a>WhatsApp</h4></div>
+                    <div><br></div>
+                    <div class="container"><a href="https://www.instagram.com/rahipu_212/" target="_blank"><h4 class="warnatext2"><i class="bi-instagram pe-md-2"></i></a>Instagram</h4></div>
+                    <div><br></div>
+                    <div class="container"><a href="https://web.facebook.com/sirlock.xander/" target="_blank"><h4 class="warnatext2"><i class="bi bi-facebook pe-md-2"></i></a>Facebook</h4></div>
+                </div>
+            </div>
+            <br>
+            <div class="col-3 col-md-3">
+            </div>
+            </div>
+        </div>
+        <div class="col-1 col-md-1"></div>
+      </div>
+    </footer>
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
 </body>
-
 </html>

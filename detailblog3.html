@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style1.css">
+    <link rel="stylesheet" href="assets/bootstrap5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/detailblog3.css">
+    <title>Detailblog3</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-secondary sticky-xl-top">
+        <div class="container-fluid">
+          <a class="navbar-brand text-danger" href="#">RAHMAD <span style="color: rgb(25, 44, 219);">HIDAYAT</span> PUTRA</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse left position-sticky" id="navbarScroll">
+            <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact_us" id>Contact Us </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Download
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarScrollingDropdown">
+                  <li><a class="dropdown-item" href="materi/01 - pengenalan html.pdf" download="">materi HTML<i class="bi bi-file-earmark-text"></i></a></li>
+                  <li><a class="dropdown-item" href="materi/09 10 - Pengenalan CSS (1).pdf" download="">materi CSS<i class="bi bi-braces"></i></a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="materi/13 14 - Bootstrap.pdf" download="">materi Bootstrap<i class="bi bi-people-fill"></i></a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="resume.html">Resume</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="project_uas/">My store</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!--LINE-->
+      <header class="bg-dark bg-opacity-100">
+          <br><br>
+        <div class="container-fluid justify-content-center d-flex">
+          <img src="img/trigunaabadi.png" class="rounded-circle img1" alt="">
+        </div>
+        <br><br>
+      </header>
+      <section class="bg-black">
+          <div class="container-fluid">
+              <div class="row">
+                  <div class="col-1"></div>
+                  <div class="col-10">
+                      <br>
+                      <h1 class="h1 text-center bi-textarea text-opacity-75 text-danger"> TUGAS </h1>
+                      <div class="row">
+                        <div class="col-4">
+                          <div class="list-group" id="list-tab" role="tablist">
+                            <a class="list-group-item list-group-item-action active" id="list-home-list" data-bs-toggle="list" href="#list-home" role="tab" aria-controls="list-home">
+                                bagaimana sejarah Web Server ?
+                            </a>
+                            <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="list-profile">
+                                apakah perbedaan HTTP dan HTTPS ?
+                            </a>
+                            <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="list" href="#list-messages" role="tab" aria-controls="list-messages">
+                                Sebutkan jenis-jenis Web server dan penjelasannya
+                            </a>
+                            <a class="list-group-item list-group-item-action" id="list-settings-list" data-bs-toggle="list" href="#list-settings" role="tab" aria-controls="list-settings">
+                                Cara setting IIS di Windows 10
+                            </a>
+                          </div>
+                        </div>
+                        <div class="col-8 text-light">
+                          <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+                                Web Server dibuat oleh Tim Berners-Lee pada tahun 1989, dia bekerja pada perusahaan CERN (European Organization for Nuclear Research).
+                                Tujuan awal diciptakannya Web Server yaitu untuk mempermudah pertukaran informasi antara para peneliti pada saat itu.
+                                Satu tahun berlalu, Tim Berners-Lee menghasilkan dua buah program komputer, yang pertama yaitu sebuah sistem yang diberi nama WWW atau WorldWideWeb,
+                                dan yang kedua yaitu Web Server pertama yang diberi nama CERN.
+                            </div>
+                            <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+                                HTTP merupakan protocol komunikasi data pada jaringan world wide web /www dan menjadi pengenal situs melalui url yang dicari pada browser. sedangkan https merupakan situs http yang ditambah sertifikat ssl.
+                                kesimpulanya adalah website yang not secure itu merupakan situs yang masih belum berpindah dari http menjadi https dan efek yang terlihat pada https adalah munculnya gembok hijau pada alamat url kalian sedangkan yang
+                                http munculnya gembok yang dilarang. jadi kalian sudah tahu kan perbedaan http dengan https
+                            </div>
+                            <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
+                                <h3 class="text-decoration-underline">Apache</h3>
+                                <p>untuk membuat sebuah hubungan antara server dan browser (crome, opera, safari )milik pengunjung web sambil mengirimkan file bolak-balik (antara user-server). jika menggunakan ini
+                                    anda harus tidak membayar dan untuk pemula ini mungkin bagi anda.</p>
+                                <h3 class="text-decoration-underline">Apache Tomcat</h3>
+                                <p>Server web apache tomcat merupakan aplikasi open source dan juga merupakan suatu wadah web aplikasi berbasis java yang dipakai
+                                    untuk menjalankan servlet dan JSP (Java Server Pages) disebuah aplikasi web.</p>
+                                <h3 class="text-decoration-underline">WebServer IIS</h3>
+                                <p>sering di pakai pada OS Windows (Windows 2000 dan Windows 2008) kelebihan dari webserver ini adalah
+                                    dukungan komponen protokol jaringan DNS, TCIP/IP dan software yang dipakai untuk membuat situs web. kelebihan IIS bisa diakses penuh
+                                    di sistem operasi Windows dan mendukung platform .NET.</p>
+                                <h3 class="text-decoration-underline">Server NGINX</h3>
+                                <p>nama dari sebuah webserver open source yang dapat digunakan oleh siapapun secara bebas dan gratis.Keunggulan Nginx yaitu
+                                    bisa menangani website dengan traffic tinggi jika dibandingkan dengan apache, maka kapabilitas NginX lebih baik dibanding apache server.
+                                </p>
+                                <h3 class="text-decoration-underline">Lighttpd</h3>
+                                <p>
+                                  Lighttpd adalah server web yang dirancang agar cepat, aman, fleksibel, dan sesuai dengan standar. Ini dioptimalkan untuk lingkungan 
+                                  di mana kecepatan sangat penting. Ini karena ia mengkonsumsi lebih sedikit CPU dan RAM daripada server lain. Lighttpd cocok untuk 
+                                  semua server yang memiliki masalah pemuatan.
+                                </p>
+                            </div>
+                            <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
+                                <ul class="listing pst">
+                                    <li>Langkah 1. Buka Control Panel > Program</li>
+                                    <img src="img/imgstep1.png" alt=""><br><br>
+                                    <li>setelah itu pilih Pogram> Turn Windows Feature on of off.</li>
+                                    <img src="img/imgstep2a.png" alt=""><br><br>
+                                    <li>maka akan muncul seperti berikut.</li>
+                                    <img src="img/imgstep2b.png" alt=""><br><br>
+                                    <li>Cek pada Internet Information Service yang 
+                                        menandakan kita akan mengaktifkan IIS pada Windows 10. Selanjutnya klik OK dan proses kan berjalan.</li>
+                                    <img src="img/imgstep3.png" alt=""><br><br>
+                                    <li>Langkah 2. ketika proses pengaktifan sudah selesai dan berhasil, selanjutnya kita periksa pada directory C:\ bahwa kan muncul folder dengan 
+                                        nama inetpub, folder ini merupakan directory utama dari IIS yang telah kita aktifkan. Dalam folder ini berisi beberapa folder default bawaan 
+                                        dari IIS dimana folder wwwroot adalah folder yang akan kita gunakan untuk meletakkan website kita nantinya.</li>
+                                    <img src="img/imgstep4.png" alt=""><br><br>
+                                    <li>
+                                        Langkah 3. Sekarang coba periksa pada kota search dan cari IIS Manager apakah IIS Manager sudah bisa dapat digunakan.
+                                    </li>
+                                    <img src="img/imgstep5.png" alt=""><br><br>
+                                    <li>Berikut adalah jendela IIS Manager ketika dibuka.</li>
+                                    <img src="img/imgstep6.png" alt=""><br><br>
+                                    <li>Sekian terima kasih. apabila IIS masih belum bisa digunakan maka cari solusinya di google</li>
+                                </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="col-1"></div>
+              </div>
+          </div>
+      </section>
+      <!-- LINE -->
+      
+      <!-- JS -->
+      <script type="text/javascript" src="assets/bootstrap5/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

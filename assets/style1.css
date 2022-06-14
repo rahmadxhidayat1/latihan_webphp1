@@ -1,0 +1,76 @@
+.font1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.bg1{
+    background-color: azure;
+}
+.navbar1{
+        position: sticky;
+        position: fixed;
+        top: 0px;
+}
+nav ul li:hover .sub1 {display:block}
+.rounded-image{
+    border-radius: 400px;
+    width: 350px;
+    height: 300px;
+}
+.img1{
+    width: 350px;
+    height: 300px;
+}
+/* yang dibawah ini buat html kalau mau buat column */
+/* <div class="row">
+<div class="col-2 col-md-3"></div>
+<div class="col-4 col-md-3"></div>
+<div class="col-4 col-md-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere iure officiis vero quae exercitationem dolore suscipit nesciunt facilis esse quam culpa ratione voluptates fugiat, totam ut vel illum? Eos, placeat.</div>
+<div class="col-2 col-md-3"></div>
+</div> */
+.section1{
+    background-color: rgba(58, 166, 220, 0.597);
+}
+.imgsize{
+    size: 100px;
+}
+.bcontent{
+    margin-top: 50px;
+    position: relative;
+}
+.section2{
+    background: azure;
+}
+.warnatext{
+    color: blue;
+}
+/*
+            <span>
+                <a href="http://wa.me/6285904351687" target="_blank" rel="">
+                    <i class="bi-whatsapp pe-md-2"></i>
+                </a>
+                <a href=""><i class="bi-instagram pe-md-2"></i></a>
+                <a href="https://www.youtube.com/"><i class="bi-youtube"></i></a>
+                <a href=""><i class="bi bi-twitter"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+            </span>
+*/
+.bg3{
+    background: url(https://images.unsplash.com/photo-1590496793907-4d66e2994b4d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29udGFpbmVyJTIwcG9ydHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80);
+}
+.warnatext2{
+    color: rgb(248, 0, 0);
+}
+.carousel-item{
+    height: 100vh;
+    min-height: 300px;
+    background-size: cover;
+}
+.carousel-caption{
+    top: 250px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.carousel-caption h5{
+    font-size: 100px;
+    padding-left: 100px;
+    padding-right: 100px;
+}

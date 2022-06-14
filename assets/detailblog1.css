@@ -1,0 +1,9 @@
+.navbar1{
+    position: sticky;
+    position: fixed;
+    top: 0px;
+}
+nav ul li:hover .sub1 {display:block}
+.bg3{
+    background: url(https://images.unsplash.com/photo-1590496793907-4d66e2994b4d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29udGFpbmVyJTIwcG9ydHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80);
+}
